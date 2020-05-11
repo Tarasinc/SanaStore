@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "174147944978",
+    "firebase_url": "https://sanastore-12f6a.firebaseio.com",
+    "project_id": "sanastore-12f6a",
+    "storage_bucket": "sanastore-12f6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174147944978:android:4108c5209eaac3016b8ecb",
+        "android_client_info": {
+          "package_name": "com.example.sanastore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "174147944978-g6i42acu0b2kj36btn0efjhiv7clot2q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sanastore",
+            "certificate_hash": "dbc361c3b7ac3a896a91da24df48c069c727b1a9"
+          }
+        },
+        {
+          "client_id": "174147944978-25f405ijj2rirbv16rafh8r9aeco7r5e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYiO_BJd0TTpa5u_xL9khaqZxO346R3Vc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "174147944978-25f405ijj2rirbv16rafh8r9aeco7r5e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
