@@ -4,6 +4,8 @@ public class User {
     private String Name;
     private String Password;
 
+    public User() {}
+
     public User(String name) {
         Name = name;
     }
@@ -28,4 +30,7 @@ public class User {
     public void setPassword(String password) {
         Password = password;
     }
+
+
+
 }
