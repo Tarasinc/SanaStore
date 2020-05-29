@@ -5,4 +5,6 @@
     <color name="colorAccent">#7eb644</color>
 
     <color name="btnSignUp">#7eb644</color>
+    <color name="overlayBackground">#eeeeee</color>
+    <color name="overlayActionbar">#0e0d0e</color>
 </resources>
