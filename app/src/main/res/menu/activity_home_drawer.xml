@@ -4,27 +4,27 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_menu"
-            android:icon="@drawable/ic_store_mall_directory_black_24dp"
+            android:icon="@drawable/ic_baseline_store_mall_directory_24"
             android:title="Интернет Магазин" />
 
         <item
             android:id="@+id/nav_cart"
-            android:icon="@drawable/ic_shopping_cart_black_24dp"
+            android:icon="@drawable/ic_baseline_shopping_cart_24_black"
             android:title="Корзина" />
 
         <item
             android:id="@+id/nav_orders"
-            android:icon="@drawable/ic_access_time_black_24dp"
+            android:icon="@drawable/ic_baseline_access_time_24"
             android:title="Мои заказы" />
 
         <item
             android:id="@+id/nav_info"
-            android:icon="@drawable/ic_info_outline_black_24dp"
+            android:icon="@drawable/ic_baseline_info_24"
             android:title="Инфо" />
 
         <item
             android:id="@+id/nav_log_out"
-            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:icon="@drawable/ic_baseline_exit_to_app_24"
             android:title="Выйти" />
     </group>
 </menu>

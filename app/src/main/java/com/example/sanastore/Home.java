@@ -30,7 +30,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sanastore.Common.Common;
-import com.example.sanastore.Intarface.ItemClickListener;
+import com.example.sanastore.Interface.ItemClickListener;
 import com.example.sanastore.ViewHolder.MenuViewHolder;
 
 public class Home extends AppCompatActivity
