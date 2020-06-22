@@ -1,6 +1,8 @@
 package com.example.sanastore;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
@@ -92,40 +94,47 @@ public class Home extends AppCompatActivity
         loadMenu();
 
 
+
     }
 
     private void loadMenu() {
+
         FirebaseRecyclerOptions<Category> options = new FirebaseRecyclerOptions.Builder<Category>()
                 .setQuery(category, Category.class)
                 .build();
+
         adapter = new FirebaseRecyclerAdapter<Category, MenuViewHolder>(options) {
-            @Override
-            protected void onBindViewHolder(@NonNull MenuViewHolder holder, int position,
-                                            @NonNull Category model) {
-
-                Picasso.get().load(model.getImage()).into(holder.imageView);
-                final Category clickItem = model;
-                holder.setItemClickListener(new ItemClickListener() {
-                    @Override
-                    public void onClick(View view, int position, boolean isLongClick) {
-                        Toast.makeText(Home.this, "" + clickItem.getName(), Toast.LENGTH_SHORT).show();
-
-                    }
-                });
-
-
-            }
-
             @NonNull
             @Override
             public MenuViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                return null;
+                View itemView = LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.menu_item,parent,false);
+                return new MenuViewHolder(itemView);
             }
 
+            @Override
+            protected void onBindViewHolder(@NonNull MenuViewHolder viewHolder, int position, @NonNull Category model) {
+                viewHolder.txtMenuView.setText(model.getName());
+                Picasso.get().load(model.getImage()).into(viewHolder.imageView);
+                final Category clickItem = model;
+                viewHolder.setItemClickListener(new ItemClickListener() {
+                    @Override
+                    public void onClick(View view, int position, boolean isLongClick) {
+                        //Get CategoryId and send to new Activity
+                        Toast.makeText(Home.this, ""+clickItem.getName(),Toast.LENGTH_SHORT).show();
+                    }
+                });
 
+            }
         };
+        adapter.startListening();
         recycler_menu.setAdapter(adapter);
+    }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        adapter.stopListening();
     }
 
     @Override
